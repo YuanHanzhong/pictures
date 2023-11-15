@@ -1,0 +1,65 @@
+1 ac
+2 aefg
+3 abc
+4 abc
+5 abc
+6 ac 
+
+
+1 acd
+2 adf
+3 bc
+4 abc
+5 abc
+6 ac 
+
+
+
+
+
+1  以下哪些属于实时监控项目主要监控的内容
+a   flink任务的数据量        对  
+b   用户访问量               错  业务指标
+c   flink 集群cpu负载        对  
+d   维度数据被查询次数        对   
+
+
+2  以下为拉模式的框架 
+a  promethues server     对  
+b  kafka producer        错  推 
+c  pushgateway           错  推 
+d  kafka consumer        对  拉 
+e  flink kafka source    对  
+f  maxwell source        对  拉 
+g  flume source          对   
+
+ 
+
+3   关于prometheus 正确的是
+a   Prometheus的指标体系致力于监控应用程序的内部细节     对  
+b   Prometheus不依赖任何外部的第三方数据库              对
+c   Prometheus既是一套监控框架，也是一个时序数据库       对 
+d   PromQL是一套强大的通用指标查询语言                  错 目前还是专用 
+
+
+4   关于prometheus 正确的是
+a    pushgateway 不会自动清理已经死掉的job数据        对 
+b    pushgateway 会保存所有任务的历史数据             错  pushgateway会存所有任务最新的状态，不会存历史
+c    prometheus 会保存所有任务的所有历史数据              错  默认只存短周期的历史数据 
+d    prometheus 最近的数据会保存在内存                对  近期存内存  中期数据落磁盘  久远的数据删除
+
+5   关于PromSQL 正确的是
+a   prometheus_http_requests_total{}offset 5m  获得的是瞬时向量     对 
+b   prometheus_http_requests_total{}[5m]  获得的是范围向量          对 
+c   avg_over_time()中的参数必须是范围向量                           对 
+d   sum() 中的参数必须是瞬时向量                                    对      
+
+
+6  关于flink对接prometheus正确的是
+a  flink内部的已经设置了丰富的指标提供给FlinkUI使用                   对 
+b  flink发送指标到pushgateway 的工具jar包，由prometheus制作          错  flink制作
+c  flink指标配合标签最细粒度可以达到每算子每并行度                      对    
+d  metrics.reporter.promgateway.jobName 的名称 会被该任务的yarn name 取代   错 和yarn name没有关系
+
+
+ 
